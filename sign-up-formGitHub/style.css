@@ -1,0 +1,117 @@
+@import url('https://use.fontawesome.com/releases/v5.8.2/css/all.css');
+form {
+    background: #EBF0F0;
+}
+
+form fieldset {
+    width: 10em;
+    margin: 0 auto;
+    border: none;
+}
+
+form legend {
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+form .line {
+    background: #007ACC;
+    height: 2px;
+    margin-bottom: 2em;
+}
+
+form .field {
+    display: flex;
+    margin-bottom: 2em;
+}
+
+form .field input,
+form .field label {
+    border: 1px solid gray;
+    padding: 0.4em;
+    background: white;
+}
+
+form .field input {
+    /* order: 2; */
+    flex-grow: 1;
+    border-left: 0;
+    border-top-right-radius: 0.3em;
+    border-bottom-right-radius: 0.3em;
+    outline: none;
+}
+
+form .field label {
+    order: 1;
+    display: block;
+    position: relative;
+    border-right: 0;
+    border-top-left-radius: 0.3em;
+    border-bottom-left-radius: 0.3em;
+}
+
+form .field label>span {
+    width: 15em;
+    position: absolute;
+    top: -1.3em;
+    left: 0;
+}
+
+form .field label>span span {
+    font-size: 0.7em;
+    opacity: 0.7;
+    margin-left: 0.3em;
+}
+
+form .field input:required~label>span:before {
+    display: inline-block;
+    content: "*";
+    color: red;
+    padding-right: 0.3em;
+}
+
+form .field input:required~label>span {
+    left: -0.8em;
+}
+
+.field-icon label::before {
+    display: block;
+    content: "A";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    border-right: 1px solid rgb(196, 189, 189);
+    width: 1.5em;
+}
+
+.field-icon.user label::before {
+    content: "\f007";
+}
+
+.field-icon.email label::before {
+    content: "\f0e0";
+}
+
+.field-icon.mobile label::before {
+    content: "\f10b";
+}
+
+.field-icon.pass label::before {
+    content: "\f023";
+}
+
+form .field input {
+    order: 2;
+}
+
+.sign-up {
+    background: #007ACC;
+    color: white;
+    padding: 0.5em;
+    text-align: center;
+    width: 100%;
+    margin-top: -1.5em;
+    border-radius: 0.3em;
+    border: none;
+    display: block;
+}
